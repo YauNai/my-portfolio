@@ -119,6 +119,6 @@
   }
 
   .icon {
-    height: 30px;
+    width: 50px;
   }
 </style>

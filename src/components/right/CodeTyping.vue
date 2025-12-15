@@ -1,10 +1,18 @@
 <template>
-  <div data-aos="fade" id="codeTyping"></div>
+  <div data-aos="fade" id="codeTyping" :class="{'fade-out': fadeOut}"></div>
 </template>
 
 <script setup>
   import TypeIt from 'typeit';
   import { onMounted } from 'vue';
+
+  const props = defineProps({
+    fadeOut: {
+      type: Boolean,
+      default: false,
+      required: true
+    }
+  })
 
   onMounted(() => {
     new TypeIt("#codeTyping", {
@@ -177,5 +185,11 @@
     height: 100%;
     width: 100%;
     background-color: var(--text);
+
+    transition: opacity 0.3s ease;
+  }
+
+  .fade-out {
+    opacity: 0;
   }
 </style>

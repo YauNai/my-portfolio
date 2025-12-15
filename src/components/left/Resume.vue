@@ -229,18 +229,4 @@
     grid-template-columns: 1fr 1fr;
     margin-top: 1em;
   }
-
-  .icon {
-    width: 30px;
-  }
-
-  .icon-word {
-    line-height: 1.5em;
-  }
-
-  .skill-name {
-    font-weight: bold;
-    font-size: 1.5em;
-    color: var(--text);
-  }
 </style>
