@@ -139,3 +139,13 @@ a {
   transform: translateY(100%);
   opacity: 0;
 }
+
+.slid-left {
+  transform: translateX(-100%);
+  opacity: 0;
+}
+
+.slid-right {
+  transform: translateX(100%);
+  opacity: 0;
+}

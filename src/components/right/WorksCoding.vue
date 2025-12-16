@@ -1,13 +1,13 @@
 <template>
-  <section id="worksCoding" class="grid-section">
+  <section id="works-coding" class="grid-section">
     <div></div>
 
     <div class="content">
 
       <div data-aos="fade-down" data-aos-delay="200">
-        <button class="my-btn portfolio-btn"><a href="./doggo-nest">Doggo Nest</a></button>
+        <button @click="doToAboutDoggoNest" class="my-btn portfolio-btn">Doggo Nest</button>
       </div>
-      
+
       <div data-aos="fade-down" data-aos-delay="100">
         <button class="my-btn portfolio-btn">關於此網頁</button>
       </div>
@@ -17,6 +17,17 @@
 </template>
 
 <script setup>
+  const emit = defineEmits(['doShowAboutDoggoNest', 'toggleFadeOut'])
+
+  const doToAboutDoggoNest = () => {
+    document.querySelector("#works-coding").classList.add("slid-left");
+
+    emit('toggleFadeOut')
+
+    setTimeout(() => {
+      emit('doShowAboutDoggoNest')
+    }, 750);
+  }
 </script>
 
 <style scoped>
