@@ -8,7 +8,7 @@
         <button @click="doToWorksCoding" class="my-btn portfolio-btn">網頁設計作品</button>
       </div>
       <div data-aos="fade" data-aos-duration="1000" data-aos-delay="1000">
-        <button class="my-btn portfolio-btn">3D 動畫作品</button>
+        <button @click="doToWorks3D" class="my-btn portfolio-btn">3D 動畫作品</button>
       </div>
     </div>
   </section>
@@ -26,6 +26,14 @@
 
     setTimeout(() => {
       emit('doShowWorksCoding')
+    }, 750);
+  }
+
+  const doToWorks3D = () => {
+    document.querySelector("#portfolio").classList.add("slid-up");
+
+    setTimeout(() => {
+      emit('doShowWorks3D')
     }, 750);
   }
 

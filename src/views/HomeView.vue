@@ -2,9 +2,9 @@
 import Contact from '@/components/left/Contact.vue';
 import LeftMain from '@/components/left/Main.vue';
 import Resume from '@/components/left/Resume.vue';
+import Folder3D from '@/components/right/Folder3D.vue';
 import FolderCoding from '@/components/right/FolderCoding.vue';
 import Protfolio from '@/components/right/Protfolio.vue';
-import Works3D from '@/components/right/Works3D.vue';
 import { ref } from 'vue';
 
 // Left
@@ -40,19 +40,25 @@ const fromContact = () => {
 
 // Right
 const showFolderCoding = ref(false)
-const showPortfolio = ref(true)
-const showWorks3D = ref(false)
+const showPortfolio = ref(false)
+const showFolder3D = ref(true)
 
 const doShowWorksCoding = () => {
   showFolderCoding.value = true
   showPortfolio.value = false
-  showWorks3D.value = false
+  showFolder3D.value = false
 }
 
 const doShowPortfolio = () => {
   showFolderCoding.value = false
   showPortfolio.value = true
-  showWorks3D.value = false
+  showFolder3D.value = false
+}
+
+const doShowWorks3D = () => {
+  showFolderCoding.value = false
+  showPortfolio.value = false
+  showFolder3D.value = true
 }
 </script>
 
@@ -88,10 +94,12 @@ const doShowPortfolio = () => {
       <Protfolio
         v-if="showPortfolio"
         @doShowWorksCoding="doShowWorksCoding" 
+        @doShowWorks3D="doShowWorks3D" 
       />
 
-      <Works3D 
-        v-if="showWorks3D"
+      <Folder3D 
+        v-if="showFolder3D"
+        @doShowPortfolio="doShowPortfolio"
       />
       
     </div>
