@@ -40,8 +40,8 @@ const fromContact = () => {
 
 // Right
 const showFolderCoding = ref(false)
-const showPortfolio = ref(false)
-const showFolder3D = ref(true)
+const showPortfolio = ref(true)
+const showFolder3D = ref(false)
 
 const doShowWorksCoding = () => {
   showFolderCoding.value = true
