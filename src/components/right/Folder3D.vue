@@ -162,13 +162,10 @@
 
   // 切換到作品集頁面
   const doToPortfolio = () => {
-    console.log("click");
-
     threeContainer.value?.classList.add("fade-out");
     document.querySelector("#folder-3d")?.classList.add("slid-down");
 
     setTimeout(() => {
-      console.log("emit");
       emit('doShowPortfolio');
     }, 750);
   };
