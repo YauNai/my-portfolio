@@ -24,7 +24,7 @@
           <img src="/src/assets/icon/Claude_logo.svg" alt="vue logo" class="icon">
       </div>
       <div data-aos="fade-left" data-aos-delay="400">
-        <button class="my-btn portfolio-btn"><a href="./doggo-nest" target="_blank">進入網頁</a></button>
+        <button class="my-btn portfolio-btn"><a href="./doggo-nest-offline" target="_blank">進入網頁</a></button>
       </div>
     </div>
   </section>
