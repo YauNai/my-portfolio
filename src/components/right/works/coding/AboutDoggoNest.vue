@@ -1,12 +1,12 @@
 <template>
-  <section id="doggo-nest" class="grid-about">
+  <section ref="doggo-nest" id="doggo-nest" class="grid-about">
 
     <div data-aos="fade" class="bg">
       <img :src="bgDoggoNest" alt="bgDoggoNest">
     </div>
 
     <div data-aos="fade-left">
-      <button @click="doToWorksCoding" class="my-btn portfolio-btn btn-back"><i class="fa-solid fa-arrow-left"></i></button>
+      <button @click="doToPage('WorksCoding')" class="my-btn portfolio-btn btn-back"><i class="fa-solid fa-arrow-left"></i></button>
     </div>
 
     <div class="content text-shadow">
@@ -32,17 +32,19 @@
 
 <script setup>
   import bgDoggoNest from "@/assets/image/bg_doggonest.jpeg"
+  import { useTemplateRef } from 'vue';
 
-  const emit = defineEmits(['doShowWorksCoding', 'toggleFadeOut'])
+  const section = useTemplateRef('doggo-nest')
+  const emit = defineEmits(['toggleFadeOut', 'doShowPage'])
 
-  const doToWorksCoding = () => {
-    document.querySelector("#doggo-nest").classList.add("slid-right");
-
+  const doToPage = (page) => {
+    section.value.classList.add('slid-right')
     emit('toggleFadeOut')
 
     setTimeout(() => {
-      emit('doShowWorksCoding')
+      emit('doShowPage', page)
     }, 750);
+
   }
 </script>
 

@@ -1,15 +1,15 @@
 <template>
-  <section id="works-coding" class="grid-section">
+  <section ref="works-coding" id="works-coding" class="grid-section">
     <div></div>
 
     <div class="content">
 
       <div data-aos="fade-down" data-aos-delay="200">
-        <button @click="doToAboutDoggoNest" class="my-btn portfolio-btn">Doggo Nest</button>
+        <button @click="doToPage('AboutDoggoNest')" class="my-btn portfolio-btn">Doggo Nest</button>
       </div>
 
       <div data-aos="fade-down" data-aos-delay="100">
-        <button class="my-btn portfolio-btn">關於此網頁</button>
+        <button @click="doToPage('AboutThisSite')" class="my-btn portfolio-btn">關於此網頁</button>
       </div>
 
     </div>
@@ -17,16 +17,19 @@
 </template>
 
 <script setup>
-  const emit = defineEmits(['doShowAboutDoggoNest', 'toggleFadeOut'])
+  import { useTemplateRef } from 'vue';
 
-  const doToAboutDoggoNest = () => {
-    document.querySelector("#works-coding").classList.add("slid-left");
+  const section = useTemplateRef('works-coding')
+  const emit = defineEmits(['toggleFadeOut', 'doShowPage'])
 
+  const doToPage = (page) => {
+    section.value.classList.add('slid-left')
     emit('toggleFadeOut')
 
     setTimeout(() => {
-      emit('doShowAboutDoggoNest')
+      emit('doShowPage', page)
     }, 750);
+
   }
 </script>
 

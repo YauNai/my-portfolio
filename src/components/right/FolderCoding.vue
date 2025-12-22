@@ -1,21 +1,15 @@
 <template>
-  <CodeTyping v-if="showCodeTyping" :fade-out="fadeOut" />
-  <section id="folder-coding" class="grid-section">
+  <CodeTyping v-if="currPage === 'WorksCoding'" :fade-out="fadeOut" />
+  <section ref="folder-coding" id="folder-coding" class="grid-section">
     <div></div>
 
     <div class="content">
 
-      <WorksCoding 
-        v-if="showWorksCoding"
-        @toggleFadeOut="toggleFadeOut" 
-        @doShowAboutDoggoNest="doShowAboutDoggoNest"
-      />
+      <WorksCoding v-if="currPage === 'WorksCoding'" @doShowPage="doShowPage" @toggleFadeOut="toggleFadeOut" />
 
-      <AboutDoggoNest 
-        v-if="showAboutDoggoNest"
-        @toggleFadeOut="toggleFadeOut"
-        @doShowWorksCoding="doShowWorksCoding" 
-      />
+      <AboutDoggoNest v-if="currPage === 'AboutDoggoNest'" @doShowPage="doShowPage" @toggleFadeOut="toggleFadeOut" />
+
+      <AboutThisSite v-if="currPage === 'AboutThisSite'" @doShowPage="doShowPage" @toggleFadeOut="toggleFadeOut" />
 
     </div>
 
@@ -26,15 +20,19 @@
 </template>
 
 <script setup>
-  import { ref } from 'vue';
+  import { ref, useTemplateRef } from 'vue';
   import CodeTyping from './CodeTyping.vue';
   import WorksCoding from './WorksCoding.vue';
   import AboutDoggoNest from './works/coding/AboutDoggoNest.vue';
+  import AboutThisSite from './works/coding/AboutThisSite.vue';
 
-  const showCodeTyping = ref(true)
-  const showWorksCoding = ref(true)
-  const showAboutDoggoNest = ref(false)
+  const currPage = ref('WorksCoding')
 
+  const doShowPage = (page) => {
+    currPage.value = page
+  }
+
+  const section = useTemplateRef('folder-coding')
   const emit = defineEmits(['doShowPortfolio'])
   const fadeOut = ref(false)
 
@@ -43,7 +41,7 @@
   }
 
   const doToPortfolio = () => {
-    document.querySelector("#folder-coding").classList.add("slid-up");
+    section.value.classList.add("slid-up");
 
     toggleFadeOut()
 
@@ -52,17 +50,6 @@
     }, 750);
   }
 
-  const doShowAboutDoggoNest = () => {
-    showCodeTyping.value = false
-    showWorksCoding.value = false
-    showAboutDoggoNest.value = true
-  }
-
-  const doShowWorksCoding = () => {
-    showCodeTyping.value = true
-    showWorksCoding.value = true
-    showAboutDoggoNest.value = false
-  }
 </script>
 
 <style scoped></style>
