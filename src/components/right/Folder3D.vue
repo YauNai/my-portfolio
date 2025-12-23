@@ -25,11 +25,12 @@
   // Three.js 相關變數
   let scene, camera, renderer, animationId;
   let cube, gridLines = [], axisLines = [];
+  const clock = new THREE.Clock()
   const sizes = {
     width: window.innerWidth / 2,
     height: window.innerHeight
   }
-  const cursor = {x: 0, y: 0}
+  const cursor = { x: 0, y: 0 }
 
   const mouseMove = (e) => {
     cursor.x = e.clientX / sizes.width - 1.5
@@ -50,8 +51,9 @@
       0.1,
       20
     );
+    camera.position.x = 5;
     camera.position.y = 2;
-    camera.position.z = 5;
+    camera.position.z = 0;
     camera.lookAt(0, 0, 0);
 
     // 渲染器
@@ -144,10 +146,16 @@
 
   // 動畫循環
   const animate = () => {
+    const deltaTime = clock.getDelta()
     animationId = requestAnimationFrame(animate);
-    camera.position.x = Math.sin(cursor.x * Math.PI) * 5
-    camera.position.z = Math.cos(cursor.x * Math.PI) * 5
-    camera.position.y = cursor.y * -5 + 2
+
+    // lerping
+    const lerp = 1 - Math.pow(0.001, deltaTime * 3)
+
+    camera.position.x += (Math.sin(-cursor.x * Math.PI) * 5 - camera.position.x) * lerp
+    camera.position.z += (Math.cos(-cursor.x * Math.PI) * 5 - camera.position.z) * lerp
+    camera.position.y += (cursor.y * -5 + 2 - camera.position.y) * lerp
+
     camera.lookAt(cube.position)
     renderer.render(scene, camera);
   };
