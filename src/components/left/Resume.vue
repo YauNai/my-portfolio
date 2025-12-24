@@ -1,7 +1,7 @@
 <template>
   <section id="resume" v-if="fromWhereToResume === 'fromLeftMain'" class="grid-section">
     <div data-aos="fade-up" style="text-align: center;">
-      <button @click="doToLeftMain" class="my-btn btn-top">首頁</button>
+      <button @click="doToLeftMain" class="my-btn">首頁</button>
     </div>
 
     <div class="content text-shadow">
@@ -76,13 +76,13 @@
       </div>
 
     <div data-aos="fade-up" data-aos-delay="600" data-aos-offset="-200" style="text-align: center;">
-      <button @click="doToContact" class="my-btn btn-bottom">與我聯繫</button>
+      <button @click="doToContact" class="my-btn">與我聯繫</button>
     </div>
   </section>
 
   <section id="resume" v-if="fromWhereToResume === 'fromContact'" class="grid-section">
     <div data-aos="fade-down" data-aos-delay="500" style="text-align: center;">
-      <button @click="doToLeftMain" class="my-btn btn-top">首頁</button>
+      <button @click="doToLeftMain" class="my-btn">首頁</button>
     </div>
 
     <div class="content text-shadow">
@@ -157,7 +157,7 @@
       </div>
 
     <div data-aos="fade-down" data-aos-offset="-200" style="text-align: center;">
-      <button @click="doToContact" class="my-btn btn-bottom">與我聯繫</button>
+      <button @click="doToContact" class="my-btn">與我聯繫</button>
     </div>
   </section>
 
