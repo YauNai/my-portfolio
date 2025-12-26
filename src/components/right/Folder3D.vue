@@ -158,8 +158,8 @@ const animate = () => {
   // lerping
   const lerp = 1 - Math.pow(0.001, deltaTime * 3)
 
-  camera.position.x += (Math.cos(cursor.x * Math.PI) * 5 - camera.position.x) * lerp
-  camera.position.z += (Math.sin(cursor.x * Math.PI) * 5 - camera.position.z) * lerp
+  camera.position.x += (Math.sin(cursor.x * Math.PI) * 5 - camera.position.x) * lerp
+  camera.position.z += (Math.cos(cursor.x * Math.PI) * -5 - camera.position.z) * lerp
   camera.position.y += (cursor.y * -5 + 2 - camera.position.y) * lerp
 
   camera.lookAt(cube.position)
