@@ -1,38 +1,49 @@
-# portfolio-site
+# 作品集網站
 
-This template should help get you started developing with Vue 3 in Vite.
+## 使用框架與套件
+### 框架
 
-## Recommended IDE Setup
+- Vue.js
 
-[VS Code](https://code.visualstudio.com/) + [Vue (Official)](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+### 套件
 
-## Recommended Browser Setup
+- Vue Router
+- Three.js
+- GSAP
+- TypeIt
+- AOS
 
-- Chromium-based browsers (Chrome, Edge, Brave, etc.):
-  - [Vue.js devtools](https://chromewebstore.google.com/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd) 
-  - [Turn on Custom Object Formatter in Chrome DevTools](http://bit.ly/object-formatters)
-- Firefox:
-  - [Vue.js devtools](https://addons.mozilla.org/en-US/firefox/addon/vue-js-devtools/)
-  - [Turn on Custom Object Formatter in Firefox DevTools](https://fxdx.dev/firefox-devtools-custom-object-formatters/)
+### 設計規劃
 
-## Customize configuration
+- Figma
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+## 網站特色
 
-## Project Setup
+- 左右雙區塊：履歷區｜作品集
+- 響應式設計
 
-```sh
-npm install
+## 網站地圖
+
+### 履歷區
+
+```
+┌─ 履歷首頁
+├─ 詳細資訊
+└─ 聯絡我
 ```
 
-### Compile and Hot-Reload for Development
+### 作品集
 
-```sh
-npm run dev
 ```
-
-### Compile and Minify for Production
-
-```sh
-npm run build
+      ┌─ Doggo Nest
+      |    ├─ 線上版
+      |    ├─ 離線版
+      |    └─ Github
+      ├─ 「悅讀」會員頁面
+      |    └─ Github
+      ├─ 關於此網站
+      |    └─ Github
+  ┌─ 網頁程式設計作品
+作品集首頁
+  └─ 3D 動畫作品
 ```
