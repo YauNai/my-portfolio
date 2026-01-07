@@ -8,6 +8,10 @@
         <button @click="doToPage('AboutDoggoNest')" class="my-btn portfolio-btn">Doggo Nest</button>
       </div>
 
+      <div data-aos="fade-down" data-aos-delay="200">
+        <button @click="doToPage('AboutUserDashboard')" class="my-btn portfolio-btn">「悅讀」會員頁面</button>
+      </div>
+
       <div data-aos="fade-down" data-aos-delay="100">
         <button @click="doToPage('AboutThisSite')" class="my-btn portfolio-btn">關於此網頁</button>
       </div>

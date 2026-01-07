@@ -9,6 +9,8 @@
 
       <AboutDoggoNest v-if="currPage === 'AboutDoggoNest'" @doShowPage="doShowPage" @toggleFadeOut="toggleFadeOut" />
 
+      <AboutUserDashboard v-if="currPage === 'AboutUserDashboard'" @doShowPage="doShowPage" @toggleFadeOut="toggleFadeOut" />
+
       <AboutThisSite v-if="currPage === 'AboutThisSite'" @doShowPage="doShowPage" @toggleFadeOut="toggleFadeOut" />
 
     </div>
@@ -25,6 +27,7 @@
   import WorksCoding from './WorksCoding.vue';
   import AboutDoggoNest from './works/coding/AboutDoggoNest.vue';
   import AboutThisSite from './works/coding/AboutThisSite.vue';
+import AboutUserDashboard from './works/coding/AboutUserDashboard.vue';
 
   const currPage = ref('WorksCoding')
 
