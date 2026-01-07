@@ -19,10 +19,10 @@
       </div>
       <div data-aos="fade-left" data-aos-delay="300" class="icons">
         <img src="/src/assets/icon/vue_logo.svg" alt="vue logo" class="icon">
-        <img src="/src/assets/icon/figma_logo.svg" alt="vue logo" class="icon">
-        <img src="/src/assets/icon/ChatGPT_Logo.svg" alt="vue logo" class="icon">
-        <img src="/src/assets/icon/Gemini_logo.svg" alt="vue logo" class="icon">
-        <img src="/src/assets/icon/Claude_logo.svg" alt="vue logo" class="icon">
+        <img src="/src/assets/icon/figma_logo.svg" alt="figma logo" class="icon">
+        <img src="/src/assets/icon/ChatGPT_Logo.svg" alt="chatgpt logo" class="icon">
+        <img src="/src/assets/icon/Gemini_logo.svg" alt="gemini logo" class="icon">
+        <img src="/src/assets/icon/Claude_logo.svg" alt="claude logo" class="icon">
       </div>
       <div data-aos="fade-left" data-aos-delay="400" class="links">
         <button class="my-btn portfolio-btn"><a href="https://doggo-nest.onrender.com/" target="_blank">線上預覽</a>

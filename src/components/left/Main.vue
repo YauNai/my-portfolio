@@ -17,7 +17,7 @@
 
       <div class="icons">
         <div id="icon1" data-aos="fade" data-aos-duration="1000">
-          <img class="icon glow" src="/src/assets/icon/blender_logo.svg" alt="blender logo">
+          <img class="icon glow" src="/src/assets/icon/Blender_logo.svg" alt="blender logo">
         </div>
         <div id="icon2" data-aos="fade" data-aos-duration="1000">
           <img class="icon glow" src="/src/assets/icon/vue_logo.svg" alt="vue logo">
