@@ -6,7 +6,8 @@
     </div>
 
     <div data-aos="fade-left">
-      <button @click="doToPage('WorksCoding')" class="my-btn portfolio-btn btn-back"><i class="fa-solid fa-arrow-left"></i></button>
+      <button @click="doToPage('WorksCoding')" class="my-btn portfolio-btn btn-back"><i
+          class="fa-solid fa-arrow-left"></i></button>
     </div>
 
     <div class="content text-shadow">
@@ -17,15 +18,17 @@
         <h2 class="title">狗狗窩研究所</h2>
       </div>
       <div data-aos="fade-left" data-aos-delay="300" class="icons">
-          <img src="/src/assets/icon/vue_logo.svg" alt="vue logo" class="icon">
-          <img src="/src/assets/icon/figma_logo.svg" alt="vue logo" class="icon">
-          <img src="/src/assets/icon/ChatGPT_Logo.svg" alt="vue logo" class="icon">
-          <img src="/src/assets/icon/Gemini_logo.svg" alt="vue logo" class="icon">
-          <img src="/src/assets/icon/Claude_logo.svg" alt="vue logo" class="icon">
+        <img src="/src/assets/icon/vue_logo.svg" alt="vue logo" class="icon">
+        <img src="/src/assets/icon/figma_logo.svg" alt="vue logo" class="icon">
+        <img src="/src/assets/icon/ChatGPT_Logo.svg" alt="vue logo" class="icon">
+        <img src="/src/assets/icon/Gemini_logo.svg" alt="vue logo" class="icon">
+        <img src="/src/assets/icon/Claude_logo.svg" alt="vue logo" class="icon">
       </div>
-      <div data-aos="fade-left" data-aos-delay="400">
-        <button class="my-btn portfolio-btn"><a href="./doggo-nest" target="_blank">進入線上版網頁</a></button><br><br>
-        <button class="my-btn portfolio-btn"><a href="./doggo-nest-offline" target="_blank">進入離線版網頁</a></button>
+      <div data-aos="fade-left" data-aos-delay="400" class="links">
+        <button class="my-btn portfolio-btn"><a href="./doggo-nest" target="_blank">進入線上版網頁</a>
+        </button>
+        <button class="my-btn portfolio-btn"><a href="https://github.com/YauNai/doggo-nest"
+            target="_blank">檢視原始碼</a></button>
       </div>
     </div>
   </section>
@@ -89,12 +92,15 @@
       object-position: center top;
       opacity: 0;
     }
+
     5% {
       opacity: 1;
     }
+
     95% {
       opacity: 1;
     }
+
     100% {
       object-position: center bottom;
       opacity: 0;
@@ -124,7 +130,7 @@
     width: 250px;
     margin: 1.5em 0;
   }
-  
+
   .icon {
     width: 40px;
   }
@@ -134,5 +140,11 @@
     height: 50px;
     width: 50px;
     border-radius: 50%;
+  }
+
+  .links {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
   }
 </style>
