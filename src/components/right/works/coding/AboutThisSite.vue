@@ -1,7 +1,8 @@
 <template>
   <section ref="this-site" id="this-site" class="grid-about">
     <div data-aos="fade-left">
-      <button @click="doToPage('WorksCoding')" class="my-btn portfolio-btn btn-back"><i class="fa-solid fa-arrow-left"></i></button>
+      <button @click="doToPage('WorksCoding')" class="my-btn portfolio-btn btn-back"><i
+          class="fa-solid fa-arrow-left"></i></button>
     </div>
 
     <div class="content text-shadow">
@@ -9,14 +10,18 @@
         <h2 class="title">作品集網站</h2>
       </div>
       <div data-aos="fade-left" data-aos-delay="200" class="icons">
-          <img src="/src/assets/icon/vue_logo.svg" alt="vue logo" class="icon">
-          <img src="/src/assets/icon/figma_logo.svg" alt="figma logo" class="icon">
+        <img src="/src/assets/icon/vue_logo.svg" alt="vue logo" class="icon">
+        <img src="/src/assets/icon/figma_logo.svg" alt="figma logo" class="icon">
       </div>
       <div data-aos="fade-left" data-aos-delay="300">
         <h3>使用套件：</h3>
         <p>AOS：DOM 過渡動畫</p>
         <p>Three：3D 物件</p>
         <p>TypeIt：打字動畫</p>
+      </div>
+      <div data-aos="fade-left" data-aos-delay="400" class="buttons">
+        <button class="my-btn portfolio-btn"><a href="https://github.com/YauNai/my-portfolio"
+          target="_blank">檢視原始碼</a></button>
       </div>
     </div>
   </section>
@@ -50,6 +55,10 @@
     margin: 0.4em 0;
   }
 
+  .buttons {
+    margin: 2em 0;
+  }
+
   .icons {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -57,7 +66,7 @@
     width: 100px;
     margin: 1.5em 0;
   }
-  
+
   .icon {
     width: 40px;
   }
