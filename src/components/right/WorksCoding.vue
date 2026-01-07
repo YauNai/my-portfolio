@@ -4,7 +4,7 @@
 
     <div class="content">
 
-      <div data-aos="fade-down" data-aos-delay="200">
+      <div data-aos="fade-down" data-aos-delay="300">
         <button @click="doToPage('AboutDoggoNest')" class="my-btn portfolio-btn">Doggo Nest</button>
       </div>
 

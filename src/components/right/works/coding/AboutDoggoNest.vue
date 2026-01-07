@@ -25,7 +25,7 @@
         <img src="/src/assets/icon/Claude_logo.svg" alt="vue logo" class="icon">
       </div>
       <div data-aos="fade-left" data-aos-delay="400" class="links">
-        <button class="my-btn portfolio-btn"><a href="./doggo-nest" target="_blank">進入線上版網頁</a>
+        <button class="my-btn portfolio-btn"><a href="https://doggo-nest.onrender.com/" target="_blank">線上預覽</a>
         </button>
         <button class="my-btn portfolio-btn"><a href="https://github.com/YauNai/doggo-nest"
             target="_blank">檢視原始碼</a></button>
