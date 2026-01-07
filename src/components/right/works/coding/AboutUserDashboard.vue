@@ -18,7 +18,7 @@
         <h2 class="title">「悅讀」會員頁面</h2>
       </div>
       <div data-aos="fade-left" data-aos-delay="300" class="icons">
-        <img src="/src/assets/icon/vue_logo.svg" alt="vue logo" class="icon">
+        <img :src="iconVue" alt="vue logo" class="icon">
       </div>
       <div data-aos="fade-left" data-aos-delay="400" class="links">
         <button class="my-btn portfolio-btn"><a href="https://user-dashboard-1p36.onrender.com/" target="_blank">線上預覽</a>
@@ -32,6 +32,7 @@
 
 <script setup>
   import bgUserDashboard from "@/assets/image/bg_userdashboard.jpg"
+  import iconVue from '@/assets/icon/vue_logo.svg'
   import { useTemplateRef } from 'vue';
 
   const section = useTemplateRef('doggo-nest')

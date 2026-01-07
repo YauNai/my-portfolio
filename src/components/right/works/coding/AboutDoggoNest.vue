@@ -18,11 +18,11 @@
         <h2 class="title">狗狗窩研究所</h2>
       </div>
       <div data-aos="fade-left" data-aos-delay="300" class="icons">
-        <img src="/src/assets/icon/vue_logo.svg" alt="vue logo" class="icon">
-        <img src="/src/assets/icon/figma_logo.svg" alt="figma logo" class="icon">
-        <img src="/src/assets/icon/ChatGPT_Logo.svg" alt="chatgpt logo" class="icon">
-        <img src="/src/assets/icon/Gemini_logo.svg" alt="gemini logo" class="icon">
-        <img src="/src/assets/icon/Claude_logo.svg" alt="claude logo" class="icon">
+        <img :src="iconVue" alt="vue logo" class="icon">
+        <img :src="iconFigma" alt="figma logo" class="icon">
+        <img :src="iconChatGPT" alt="chatgpt logo" class="icon">
+        <img :src="iconGemini" alt="gemini logo" class="icon">
+        <img :src="iconClaude" alt="claude logo" class="icon">
       </div>
       <div data-aos="fade-left" data-aos-delay="400" class="links">
         <button class="my-btn portfolio-btn"><a href="https://doggo-nest.onrender.com/" target="_blank">線上預覽</a>
@@ -36,6 +36,11 @@
 
 <script setup>
   import bgDoggoNest from "@/assets/image/bg_doggonest.jpeg"
+  import iconVue from '@/assets/icon/vue_logo.svg'
+  import iconFigma from '@/assets/icon/figma_logo.svg'
+  import iconChatGPT from '@/assets/icon/ChatGPT_Logo.svg'
+  import iconGemini from '@/assets/icon/Gemini_logo.svg'
+  import iconClaude from '@/assets/icon/Claude_logo.svg'
   import { useTemplateRef } from 'vue';
 
   const section = useTemplateRef('doggo-nest')

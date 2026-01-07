@@ -10,8 +10,8 @@
         <h2 class="title">作品集網站</h2>
       </div>
       <div data-aos="fade-left" data-aos-delay="200" class="icons">
-        <img src="/src/assets/icon/vue_logo.svg" alt="vue logo" class="icon">
-        <img src="/src/assets/icon/figma_logo.svg" alt="figma logo" class="icon">
+        <img :src="iconVue" alt="vue logo" class="icon">
+        <img :src="iconFigma" alt="figma logo" class="icon">
       </div>
       <div data-aos="fade-left" data-aos-delay="300">
         <h3>使用套件：</h3>
@@ -29,6 +29,8 @@
 
 <script setup>
   import { useTemplateRef } from "vue";
+  import iconVue from '@/assets/icon/vue_logo.svg'
+  import iconFigma from '@/assets/icon/figma_logo.svg'
 
   const section = useTemplateRef('this-site')
   const emit = defineEmits(['doShowPage', 'toggleFadeOut'])

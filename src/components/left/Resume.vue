@@ -115,38 +115,38 @@
 
             <div>
               <div class="icon-word">
-                <img src="/src/assets/icon/vue_logo.svg" alt="vue logo" class="icon">
+                <img :src="iconVue" alt="vue logo" class="icon">
                 <span class="skill-name">VUE</span>
               </div>
               <div class="icon-word">
-                <img src="/src/assets/icon/html_logo.svg" alt="vue logo" class="icon">
+                <img :src="iconHtml" alt="html logo" class="icon">
                 <span class="skill-name">HTML</span>
               </div>
               <div class="icon-word">
-                <img src="/src/assets/icon/css_logo.svg" alt="vue logo" class="icon">
+                <img :src="iconCss" alt="css logo" class="icon">
                 <span class="skill-name">CSS</span>
               </div>
               <div class="icon-word">
-                <img src="/src/assets/icon/figma_logo.svg" alt="vue logo" class="icon">
+                <img :src="iconFigma" alt="figma logo" class="icon">
                 <span class="skill-name">Figma</span>
               </div>
             </div>
 
             <div>
               <div class="icon-word">
-                <img src="/src/assets/icon/Blender_logo.svg" alt="vue logo" class="icon">
+                <img :src="iconBlender" alt="blender logo" class="icon">
                 <span class="skill-name">Blender</span>
               </div>
               <div class="icon-word">
-                <img src="/src/assets/icon/ChatGPT_Logo.svg" alt="vue logo" class="icon">
+                <img :src="iconChatGPT" alt="chatgpt logo" class="icon">
                 <span class="skill-name">ChatGPT</span>
               </div>
               <div class="icon-word">
-                <img src="/src/assets/icon/Gemini_logo.svg" alt="vue logo" class="icon">
+                <img :src="iconGemini" alt="gemini logo" class="icon">
                 <span class="skill-name">Gemini</span>
               </div>
               <div class="icon-word">
-                <img src="/src/assets/icon/Claude_logo.svg" alt="vue logo" class="icon">
+                <img :src="iconClaude" alt="claude logo" class="icon">
                 <span class="skill-name">Claude</span>
               </div>
             </div>
@@ -164,6 +164,15 @@
 </template>
 
 <script setup>
+  import iconVue from '@/assets/icon/vue_logo.svg'
+  import iconHtml from '@/assets/icon/html_logo.svg'
+  import iconCss from '@/assets/icon/css_logo.svg'
+  import iconFigma from '@/assets/icon/figma_logo.svg'
+  import iconBlender from '@/assets/icon/Blender_logo.svg'
+  import iconChatGPT from '@/assets/icon/ChatGPT_Logo.svg'
+  import iconGemini from '@/assets/icon/Gemini_logo.svg'
+  import iconClaude from '@/assets/icon/Claude_logo.svg'
+
   const props = defineProps({
     fromWhereToResume: {
       type: String,
