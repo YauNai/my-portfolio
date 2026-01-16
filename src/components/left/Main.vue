@@ -78,7 +78,7 @@
       .exec(() => {
         title1Element.classList.remove("hide-cursor");
       })
-      .type("前端網頁設計師")
+      .type("前端網頁程式設計師")
       .pause(500)
       .exec(() => {
         document.querySelector("#title2").classList.add("aos-animate")
